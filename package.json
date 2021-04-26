@@ -1,0 +1,9 @@
+{
+  "name": "mas_backend",
+  "version": "1.0.0",
+  "description": "api for web application",
+  "main": "server.ts",
+  "repository": "https://github.com/jonathanwollinger/mas_backend.git",
+  "author": "Jonathan Wollinger",
+  "license": "MIT"
+}
