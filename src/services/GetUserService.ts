@@ -8,15 +8,9 @@ interface UserData {
 class GetUserService {
     public async execute({id}: UserData): Promise<User | {}> {
 
-        if(!id) {
-            return {
-                error: 'Id not found in the parameter'
-            }
-        }
+        const usersRepository = getRepository(User);
 
-        const userRepository = getRepository(User);
-
-        const user = await userRepository.findOne({id});
+        const user = await usersRepository.findOne({id});
 
         if (!user) {
             return {
