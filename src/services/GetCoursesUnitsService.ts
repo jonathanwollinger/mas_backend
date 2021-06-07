@@ -5,22 +5,22 @@ interface UserId {
     id?: string
 }
 
-class GetCourseUnit {
+class GetCoursesUnitsService {
     public async execute({id}: UserId){
 
         const CourseUnitRepository = getRepository(CourseUnit);
 
-        const courseUnit = await CourseUnitRepository.find();
+        const courseUnits = await CourseUnitRepository.find();
 
-        if (!courseUnit) {
+        if (!courseUnits) {
             return {
                 message: 'Course Unit not found'
             }
         }
 
         return 
-            courseUnit;
+            courseUnits;
     }
 }
 
-export {GetCourseUnit}
+export {GetCoursesUnitsService}
