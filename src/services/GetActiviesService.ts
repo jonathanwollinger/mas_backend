@@ -6,21 +6,23 @@ interface UserId {
 }
 
 class GetActivyService {
+
     public async execute({id}: UserId){
+        
+        console.log('Id do usuário da atividade: ' + id)
 
         const activyRepository = getRepository(Activy);
 
-        const activy = await activyRepository.find();
+        const activies = await activyRepository.find({relations: ["course_unit"]});
 
-        if (!activy) {
+        if(!activies){
             return {
-                message: 'Activy not found'
+                message:"activies not found"
             }
         }
 
-        return 
-            activy;
+        return activies;
     }
 }
 
-export {GetActivyService}
+export {GetActivyService} 
