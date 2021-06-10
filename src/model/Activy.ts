@@ -1,7 +1,6 @@
-import {Column, CreateDateColumn, Entity, JoinTable, ManyToOne, PrimaryColumn} from 'typeorm'
+import {Column, CreateDateColumn, Entity, JoinTable, ManyToOne, PrimaryColumn} from 'typeorm';
 import {v4 as uuid} from 'uuid';
-
-import { CourseUnit } from './CourseUnit'
+import { CourseUnit } from './CourseUnit';
 
 @Entity("activies")
 class Activy {
